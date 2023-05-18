@@ -20,10 +20,13 @@ export async function loadLocaleMessages(i18n, locale) {
     /* webpackChunkName: "locale-[request]" */ `../locales/${locale}.json`
     )
 
+  console.log('locale',  locale)
+  console.log('messages',  messages)
+  console.log('i18n',  i18n)
   // set locale and locale message
   i18n.global.setLocaleMessage(locale, messages.default)
 
-  console.log('  i18n.global',   i18n.global)
+  console.log(' i18n.global',   i18n.global.getLocaleMessage())
 
   return nextTick()
 }

@@ -2,12 +2,14 @@
 import RadioComponent from '../form/RadioComponent.vue'
 import InputComponent from '../form/InputComponent.vue'
 import VueMultiselect from 'vue-multiselect'
+
 import '../../plugins/vee-validate'
+
 import cities from '../../data/cities.json'
 
 import {computed, onMounted, ref} from 'vue'
 
-import {SUPPORT_LOCALES} from '../../i18n'
+import {SUPPORT_LOCALES} from '../../plugins/i18n'
 import {useRoute} from 'vue-router'
 import {useModalStore} from '../../stores/modal'
 
